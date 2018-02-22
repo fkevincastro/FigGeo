@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+
+ xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    tools:context="com.fkevincastro.figgeo.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo"
+        android:gravity="center_horizontal"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/blueviolet" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="274dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="27dp">
+
+        <LinearLayout
+            android:layout_width="83dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:src="@drawable/cubo" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:src="@drawable/cuadro" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:src="@drawable/circulo" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:src="@drawable/triangulo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="96dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+             <RadioButton
+
+                android:id="@+id/rCubo"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:baselineAligned="false"
+                android:onClick="OnclickRadioButton"
+                android:text="@string/cubo" />
+
+             <RadioButton
+                android:id="@+id/rCuadrado"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:baselineAligned="false"
+                android:onClick="OnclickRadioButton"
+                android:text="@string/cuadro" />
+
+             <RadioButton
+                android:id="@+id/rCirculo"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:baselineAligned="false"
+                android:onClick="OnclickRadioButton"
+                android:text="@string/circulo" />
+
+             <RadioButton
+                android:id="@+id/rTriangulo"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:baselineAligned="true"
+                android:onClick="OnclickRadioButton"
+                android:text="@string/triangulo" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="158dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/eArista"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/arista"
+                 android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/eLado"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/lado"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/eRadio"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/radio"
+                android:inputType="number" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/eAncho"
+                    android:layout_width="78dp"
+                    android:layout_height="64dp"
+                    android:ems="10"
+                    android:hint="@string/ancho"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/eAlto"
+                    android:layout_width="78dp"
+                    android:layout_height="64dp"
+                    android:ems="10"
+                    android:hint="@string/alto"
+                    android:inputType="number" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="214dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center_horizontal"
+                android:text="@string/perimetro"
+                android:textColor="@color/blue"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tPerimetro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textColor="@color/blue"
+                android:textSize="15dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center_horizontal"
+                android:text="@string/area"
+                android:textColor="@color/blue"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textColor="@color/blue"
+                android:textSize="15dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center_horizontal"
+                android:text="@string/volumen"
+                android:textColor="@color/blue"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tVolumen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textColor="@color/blue"
+                android:textSize="15dp"
+                />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+
+
+
+
